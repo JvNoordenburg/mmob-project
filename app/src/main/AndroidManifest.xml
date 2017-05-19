@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="uu.mbi.mmob.alternative_buttons">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.activities.ActivityMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +20,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CameraActivity"/>
+        <activity android:name=".ui.activities.ActivityButtonCamera"/>
+        <activity android:name=".ui.activities.ActivityTestAlgorithm"/>
+
+        <activity android:name=".ui.activities.ActivityTestImu"
+                  android:screenOrientation="landscape"
+                  android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".ui.activities.ActivityButtonTap"
+                  android:screenOrientation="landscape"
+                  android:configChanges="keyboardHidden|orientation|screenSize" />
 
     </application>
 
