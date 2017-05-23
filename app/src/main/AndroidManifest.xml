@@ -3,6 +3,7 @@
     package="uu.mbi.mmob.alternative_buttons">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -20,16 +21,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activities.ActivityButtonCamera"/>
-        <activity android:name=".ui.activities.ActivityTestAlgorithm"/>
+        <activity android:name=".ui.activities.ActivityButtonCamera" />
+        <activity android:name=".ui.activities.ActivityTestAlgorithm" />
 
-        <activity android:name=".ui.activities.ActivityTestImu"
-                  android:screenOrientation="landscape"
-                  android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".ui.activities.ActivityTestImu"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" />
 
-        <activity android:name=".ui.activities.ActivityButtonTap"
-                  android:screenOrientation="landscape"
-                  android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".ui.activities.ActivityButtonTap"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activities.ActivityTestCamera"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
 
     </application>
 

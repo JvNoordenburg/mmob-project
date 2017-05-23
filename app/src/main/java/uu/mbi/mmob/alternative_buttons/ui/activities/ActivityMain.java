@@ -41,7 +41,7 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
         switch (view.getId())
         {
             case R.id.ib_camera:
-                intent = new Intent(this, ActivityButtonCamera.class);
+                intent = new Intent(this, ActivityTestCamera.class);
                 break;
             
             case R.id.activity_main_bTestAlgorithm:
