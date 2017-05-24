@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="100">
-
-    <!--<TextureView
-        android:id="@+id/activity_test_camera_tvPreview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="80" />-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/activity_test_camera_tvButtonState"
+        android:id="@+id/activity_button_camera_tvButtonState"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:textAlignment="center"
         android:text="NOT_PRESSED"/>
 
@@ -22,11 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="20"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:weightSum="100">
 
         <Button
-            android:id="@+id/activity_test_camera_bStart"
+            android:id="@+id/activity_button_camera_bStart"
             style="?android:attr/buttonBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +28,7 @@
             android:text="Start"/>
 
         <Button
-            android:id="@+id/activity_test_camera_bStop"
+            android:id="@+id/activity_button_camera_bStop"
             style="?android:attr/buttonBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,4 +37,4 @@
 
     </android.support.v7.widget.ButtonBarLayout>
 
-</LinearLayout>
+</RelativeLayout>

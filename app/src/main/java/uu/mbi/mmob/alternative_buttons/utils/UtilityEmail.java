@@ -21,10 +21,11 @@ public class UtilityEmail
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_SUBJECT, "Measurements");
         intent.putExtra(Intent.EXTRA_STREAM, uri);
-        intent.putExtra(Intent.EXTRA_TEXT, message);
+        intent.putExtra(Intent.EXTRA_TEXT, "EXCEL!!!!");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(Intent.EXTRA_EMAIL, addresses);
         
         activity.startActivityForResult(Intent.createChooser(intent, "Sending measurements.."), 1);
+
     }
 }

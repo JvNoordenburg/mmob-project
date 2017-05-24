@@ -9,56 +9,59 @@ import android.widget.ImageButton;
 
 import uu.mbi.mmob.alternative_buttons.R;
 
-public class ActivityMain extends AppCompatActivity implements View.OnClickListener
-{
-    
+public class ActivityMain extends AppCompatActivity implements View.OnClickListener {
+
     private ImageButton mCameraButton;
-    
+
     @Override
-    protected void onCreate (Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         mCameraButton = (ImageButton) findViewById(R.id.ib_camera);
         mCameraButton.setOnClickListener(this);
-    
+
+        Button bTestCameraButton = (Button) findViewById(R.id.activity_main_bTestCameraButton);
+        bTestCameraButton.setOnClickListener(this);
+
         Button bTestAlgorithm = (Button) findViewById(R.id.activity_main_bTestAlgorithm);
         bTestAlgorithm.setOnClickListener(this);
-    
+
         Button bTestImu = (Button) findViewById(R.id.activity_main_bTestImu);
         bTestImu.setOnClickListener(this);
-    
+
         Button bTestTapButton = (Button) findViewById(R.id.activity_main_bTestTapButton);
         bTestTapButton.setOnClickListener(this);
     }
-    
+
     @Override
-    public void onClick (View view)
-    {
+    public void onClick(View view) {
         Intent intent = null;
-        
-        switch (view.getId())
-        {
+
+        switch (view.getId()) {
             case R.id.ib_camera:
                 intent = new Intent(this, ActivityTestCamera.class);
                 break;
-            
+
             case R.id.activity_main_bTestAlgorithm:
                 intent = new Intent(this, ActivityTestAlgorithm.class);
                 break;
-            
+
             case R.id.activity_main_bTestImu:
                 intent = new Intent(this, ActivityTestImu.class);
                 break;
-            
+
             case R.id.activity_main_bTestTapButton:
                 intent = new Intent(this, ActivityButtonTap.class);
                 break;
+
+            case R.id.activity_main_bTestCameraButton:
+                intent = new Intent(this, ActivityButtonCamera.class);
         }
 
-        if(intent != null)
-        {   startActivity(intent);}
+        if (intent != null) {
+            startActivity(intent);
+        }
     }
-    
+
 }
